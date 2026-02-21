@@ -134,6 +134,16 @@ After training stabilizes:
 
 Three visualizations are produced and saved in the `images/` folder:
 
+* `images/density_central.png` ? Central 99% density comparison
+* `images/density_logscale.png` ? Log-scale tail comparison
+* `images/full_pdf_overlay.png` ? Full PDF overlay
+
+Embedded previews:
+
+![Central 99% Density](images/density_central.png)
+![Log-Scale Tail Density](images/density_logscale.png)
+![Full PDF Overlay](images/full_pdf_overlay.png)
+
 * `images/density_central.png` — Central 99% density comparison
 * `images/density_logscale.png` — Log-scale tail comparison
 * `images/full_pdf_overlay.png` — Full PDF overlay
