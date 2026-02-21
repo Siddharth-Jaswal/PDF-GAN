@@ -31,11 +31,9 @@ We extract the `no2` column and perform the following cleaning steps:
 
 After cleaning, we obtain the feature vector:
 
-```
-
-x = \{x_1, x_2, ..., x_n\}
-
-```
+$$
+x = \{x_1, x_2, \ldots, x_n\}
+$$
 
 Basic statistics are computed for sanity verification:
 
@@ -47,29 +45,23 @@ Basic statistics are computed for sanity verification:
 
 ## Nonlinear Transformation
 
-Each value of ( x ) is transformed into ( z ) using:
+Each value of $x$ is transformed into $z$ using:
 
-```
-
+$$
 z = x + a_r \sin(b_r x)
-
-```
+$$
 
 Where:
 
-```
-
+$$
 a_r = 0.05 (r \bmod 7)
+$$
 
-```
-
-```
-
+$$
 b_r = 0.3 ((r \bmod 5) + 1)
+$$
 
-```
-
-Here, ( r ) is the university roll number.
+Here, $r$ is the university roll number (taken as $r = 102303592$).
 
 This transformation introduces structured nonlinearity into the feature space.
 
@@ -77,7 +69,7 @@ This transformation introduces structured nonlinearity into the feature space.
 
 ## GAN-Based Density Learning
 
-Instead of fitting a parametric distribution, we train a Generative Adversarial Network to learn the distribution of ( z ).
+Instead of fitting a parametric distribution, we train a Generative Adversarial Network to learn the distribution of $z$.
 
 ### GAN Architecture
 
@@ -190,7 +182,7 @@ Wasserstein Distance: 3.99
 
 Interpretation:
 
-* The distance is measured in the same units as ( z ).
+* The distance is measured in the same units as $z$.
 * Relative to the data standard deviation, this indicates a reasonably close match.
 * The generator approximates the distribution trend, though not perfectly.
 
